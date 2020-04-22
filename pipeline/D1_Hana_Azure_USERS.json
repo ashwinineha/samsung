@@ -1,0 +1,128 @@
+{
+	"name": "D1_Hana_Azure_USERS",
+	"properties": {
+		"activities": [
+			{
+				"name": "HanaToAzureCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 10,
+					"retryIntervalInSeconds": 30
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RelationalSource",
+						"query": "SELECT * FROM HYB.USERS"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"preCopyScript": {
+							"value": "TRUNCATE TABLE [dbo].[USERS]",
+							"type": "Expression"
+						}
+					},
+					"enableStaging": false,
+					"parallelCopies": 4,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"HJMPTS": "hjmpTS",
+							"CREATEDTS": "createdTS",
+							"MODIFIEDTS": "modifiedTS",
+							"TYPEPKSTRING": "TypePkString",
+							"OWNERPKSTRING": "OwnerPkString",
+							"PK": "PK",
+							"SEALED": "sealed",
+							"P_DESCRIPTION": "p_description",
+							"P_NAME": "p_name",
+							"P_UID": "p_uid",
+							"P_PROFILEPICTURE": "p_profilepicture",
+							"P_BACKOFFICELOGINDISABLED": "p_backofficelogindisabled",
+							"P_DEFAULTPAYMENTADDRESS": "p_defaultpaymentaddress",
+							"P_DEFAULTSHIPMENTADDRESS": "p_defaultshipmentaddress",
+							"P_PASSWORDENCODING": "p_passwordencoding",
+							"PASSWD": "passwd",
+							"P_PASSWORDANSWER": "p_passwordanswer",
+							"P_PASSWORDQUESTION": "p_passwordquestion",
+							"P_SESSIONLANGUAGE": "p_sessionlanguage",
+							"P_SESSIONCURRENCY": "p_sessioncurrency",
+							"P_LOGINDISABLED": "p_logindisabled",
+							"P_LASTLOGIN": "p_lastlogin",
+							"P_HMCLOGINDISABLED": "p_hmclogindisabled",
+							"P_RETENTIONSTATE": "p_retentionstate",
+							"P_USERPROFILE": "p_userprofile",
+							"P_DEACTIVATIONDATE": "p_deactivationdate",
+							"P_EUROPE1PRICEFACTORY_UDG": "p_europe1pricefactory_udg",
+							"P_EUROPE1PRICEFACTORY_UPG": "p_europe1pricefactory_upg",
+							"P_EUROPE1PRICEFACTORY_UTG": "p_europe1pricefactory_utg",
+							"P_AUTHORIZEDTOUNLOCKPAGES": "p_authorizedtounlockpages",
+							"P_DOB": "p_dob",
+							"P_ISMINOR": "p_isminor",
+							"P_MINORTYPE": "p_minortype",
+							"P_CITIZENID": "p_citizenid",
+							"ACLTS": "aCLTS",
+							"PROPTS": "propTS",
+							"P_CUSTOMERID": "p_customerid",
+							"P_PREVIEWCATALOGVERSIONS": "p_previewcatalogversions",
+							"P_TITLE": "p_title",
+							"P_DEFAULTPAYMENTINFO": "p_defaultpaymentinfo",
+							"P_TOKEN": "p_token",
+							"P_ORIGINALUID": "p_originaluid",
+							"P_TYPE": "p_type",
+							"P_PROFILEUPDATETIME": "p_profileupdatetime",
+							"P_EXTERNALID": "p_externalid",
+							"P_NONENGLISHNAME": "p_nonenglishname",
+							"P_LIFECYCLESTATUS": "p_lifecyclestatus",
+							"P_LIFECYCLESTATUSCODE": "p_lifecyclestatuscode",
+							"P_GENDER": "p_gender",
+							"P_MARTIALSTATUS": "p_martialstatus",
+							"P_PERSONTYPE": "p_persontype",
+							"P_COUNTRYOFBIRTH": "p_countryofbirth",
+							"P_COUNTRYOFCITIZENSHIP": "p_countryofcitizenship",
+							"P_COUNTRYOFRESIDENCE": "p_countryofresidence",
+							"P_PRIMARYLANGUAGE": "p_primarylanguage",
+							"P_ALUMNI": "p_alumni",
+							"P_EMAILSUPLEMENTARY": "p_emailsuplementary",
+							"P_MARKETINGPERMISSION": "p_marketingpermission",
+							"P_ENGLISHPROFICIENCYTESTRESULT": "p_englishproficiencytestresult",
+							"P_UPDATEDEMAIL": "p_updatedemail",
+							"P_SENDTOC4C": "p_sendtoc4c",
+							"P_ENQUIRIES": "p_enquiries",
+							"P_C4CWELCOMEEMAILSENTFLG": "p_c4cwelcomeemailsentflg",
+							"P_YCOMWELCOMEEMAIL": "p_ycomwelcomeemail",
+							"P_STUDYPLAN": "p_studyplan",
+							"P_SITE": "p_site",
+							"P_USERCOOKIEID": "p_usercookieid",
+							"P_ISAPPCUSTOMER": "p_isappcustomer",
+							"P_OTPTOKEN": "p_otptoken",
+							"P_TERMSANDCONDTIONSACCEPTANCE": "p_termsandcondtionsacceptance",
+							"P_CONTACTMETHODACCEPTANCE": "p_contactmethodacceptance",
+							"P_NEARESTIDPOFFICE": "p_nearestidpoffice",
+							"P_STUDYDESTINATION": "p_studydestination",
+							"P_HOWDIDYOUHEAR": "p_howdidyouhear",
+							"P_STARTDATE": "p_startdate"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "D1_Hana_USERS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "D1_Azure_users",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

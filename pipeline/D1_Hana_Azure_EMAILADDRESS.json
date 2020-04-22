@@ -1,0 +1,64 @@
+{
+	"name": "D1_Hana_Azure_EMAILADDRESS",
+	"properties": {
+		"activities": [
+			{
+				"name": "HanaToAzureCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 10,
+					"retryIntervalInSeconds": 30
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RelationalSource",
+						"query": "SELECT * FROM HYB.EMAILADDRESS"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"preCopyScript": {
+							"value": "TRUNCATE TABLE [dbo].[EMAILADDRESS]",
+							"type": "Expression"
+						}
+					},
+					"enableStaging": false,
+					"parallelCopies": 4,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"HJMPTS": "hjmpTS",
+							"CREATEDTS": "createdTS",
+							"MODIFIEDTS": "modifiedTS",
+							"TYPEPKSTRING": "TypePkString",
+							"OWNERPKSTRING": "OwnerPkString",
+							"PK": "PK",
+							"SEALED": "sealed",
+							"P_EMAILADDRESS": "p_emailaddress",
+							"P_DISPLAYNAME": "p_displayname",
+							"ACLTS": "aCLTS",
+							"PROPTS": "propTS"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "D1_Hana_EMAILADDRESS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "D1_Azure_emailaddress",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

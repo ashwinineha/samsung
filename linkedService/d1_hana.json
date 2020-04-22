@@ -1,0 +1,16 @@
+{
+	"name": "d1_hana",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SapHana",
+		"typeProperties": {
+			"connectionString": "servernode=100.101.2.10;uid=hyb",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNTg1Yjc3MC02MTE3LTQ4NjYtYTU5MS0wY2EyOTA2ZjVhOGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IDP-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

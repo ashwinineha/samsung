@@ -1,0 +1,13 @@
+{
+	"name": "p1_hana",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "p1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SapHanaTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

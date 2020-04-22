@@ -1,0 +1,41 @@
+{
+	"name": "D1_Hana_PROPS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RelationalTable",
+		"structure": [
+			{
+				"name": "HJMPTS"
+			},
+			{
+				"name": "ITEMPK"
+			},
+			{
+				"name": "ITEMTYPEPK"
+			},
+			{
+				"name": "NAME"
+			},
+			{
+				"name": "LANGPK"
+			},
+			{
+				"name": "REALNAME"
+			},
+			{
+				"name": "TYPE1"
+			},
+			{
+				"name": "VALUESTRING1"
+			},
+			{
+				"name": "VALUE1"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

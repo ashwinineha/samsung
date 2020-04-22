@@ -1,0 +1,257 @@
+{
+	"name": "D1_Hana_USERS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RelationalTable",
+		"structure": [
+			{
+				"name": "HJMPTS"
+			},
+			{
+				"name": "CREATEDTS"
+			},
+			{
+				"name": "MODIFIEDTS"
+			},
+			{
+				"name": "TYPEPKSTRING"
+			},
+			{
+				"name": "OWNERPKSTRING"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "P_DESCRIPTION"
+			},
+			{
+				"name": "P_NAME"
+			},
+			{
+				"name": "P_UID"
+			},
+			{
+				"name": "P_PROFILEPICTURE"
+			},
+			{
+				"name": "P_LDAPSEARCHBASE"
+			},
+			{
+				"name": "P_DN"
+			},
+			{
+				"name": "P_CN"
+			},
+			{
+				"name": "P_BACKOFFICELOGINDISABLED"
+			},
+			{
+				"name": "P_DEFAULTPAYMENTADDRESS"
+			},
+			{
+				"name": "P_DEFAULTSHIPMENTADDRESS"
+			},
+			{
+				"name": "P_PASSWORDENCODING"
+			},
+			{
+				"name": "PASSWD"
+			},
+			{
+				"name": "P_PASSWORDANSWER"
+			},
+			{
+				"name": "P_PASSWORDQUESTION"
+			},
+			{
+				"name": "P_SESSIONLANGUAGE"
+			},
+			{
+				"name": "P_SESSIONCURRENCY"
+			},
+			{
+				"name": "P_LOGINDISABLED"
+			},
+			{
+				"name": "P_LASTLOGIN"
+			},
+			{
+				"name": "P_HMCLOGINDISABLED"
+			},
+			{
+				"name": "P_USERPROFILE"
+			},
+			{
+				"name": "P_EUROPE1PRICEFACTORY_UDG"
+			},
+			{
+				"name": "P_EUROPE1PRICEFACTORY_UPG"
+			},
+			{
+				"name": "P_EUROPE1PRICEFACTORY_UTG"
+			},
+			{
+				"name": "P_LDAPACCOUNT"
+			},
+			{
+				"name": "P_DOMAIN"
+			},
+			{
+				"name": "P_LDAPLOGIN"
+			},
+			{
+				"name": "P_AUTHORIZEDTOUNLOCKPAGES"
+			},
+			{
+				"name": "P_DOB"
+			},
+			{
+				"name": "P_ISMINOR"
+			},
+			{
+				"name": "P_MINORTYPE"
+			},
+			{
+				"name": "P_CITIZENID"
+			},
+			{
+				"name": "ACLTS"
+			},
+			{
+				"name": "PROPTS"
+			},
+			{
+				"name": "P_CUSTOMERID"
+			},
+			{
+				"name": "P_PREVIEWCATALOGVERSIONS"
+			},
+			{
+				"name": "P_TITLE"
+			},
+			{
+				"name": "P_DEFAULTPAYMENTINFO"
+			},
+			{
+				"name": "P_TOKEN"
+			},
+			{
+				"name": "P_ORIGINALUID"
+			},
+			{
+				"name": "P_TYPE"
+			},
+			{
+				"name": "P_PROFILEUPDATETIME"
+			},
+			{
+				"name": "P_EXTERNALID"
+			},
+			{
+				"name": "P_NONENGLISHNAME"
+			},
+			{
+				"name": "P_LIFECYCLESTATUS"
+			},
+			{
+				"name": "P_LIFECYCLESTATUSCODE"
+			},
+			{
+				"name": "P_GENDER"
+			},
+			{
+				"name": "P_MARTIALSTATUS"
+			},
+			{
+				"name": "P_PERSONTYPE"
+			},
+			{
+				"name": "P_COUNTRYOFBIRTH"
+			},
+			{
+				"name": "P_COUNTRYOFCITIZENSHIP"
+			},
+			{
+				"name": "P_COUNTRYOFRESIDENCE"
+			},
+			{
+				"name": "P_PRIMARYLANGUAGE"
+			},
+			{
+				"name": "P_ALUMNI"
+			},
+			{
+				"name": "P_EMAILSUPLEMENTARY"
+			},
+			{
+				"name": "P_MARKETINGPERMISSION"
+			},
+			{
+				"name": "P_ENGLISHPROFICIENCYTESTRESULT"
+			},
+			{
+				"name": "P_UPDATEDEMAIL"
+			},
+			{
+				"name": "P_SENDTOC4C"
+			},
+			{
+				"name": "P_ENQUIRIES"
+			},
+			{
+				"name": "P_C4CWELCOMEEMAILSENTFLG"
+			},
+			{
+				"name": "P_YCOMWELCOMEEMAIL"
+			},
+			{
+				"name": "P_STUDYPLAN"
+			},
+			{
+				"name": "P_SITE"
+			},
+			{
+				"name": "SEALED"
+			},
+			{
+				"name": "P_RETENTIONSTATE"
+			},
+			{
+				"name": "P_DEACTIVATIONDATE"
+			},
+			{
+				"name": "P_USERCOOKIEID"
+			},
+			{
+				"name": "P_NEARESTIDPOFFICE"
+			},
+			{
+				"name": "P_ISAPPCUSTOMER"
+			},
+			{
+				"name": "P_OTPTOKEN"
+			},
+			{
+				"name": "P_TERMSANDCONDTIONSACCEPTANCE"
+			},
+			{
+				"name": "P_CONTACTMETHODACCEPTANCE"
+			},
+			{
+				"name": "P_STUDYDESTINATION"
+			},
+			{
+				"name": "P_HOWDIDYOUHEAR"
+			},
+			{
+				"name": "P_STARTDATE"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

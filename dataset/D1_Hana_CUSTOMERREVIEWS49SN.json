@@ -1,0 +1,44 @@
+{
+	"name": "D1_Hana_CUSTOMERREVIEWS49SN",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RelationalTable",
+		"structure": [
+			{
+				"name": "ID"
+			},
+			{
+				"name": "ITEMPK"
+			},
+			{
+				"name": "ITEMTYPEPK"
+			},
+			{
+				"name": "TIMESTAMP"
+			},
+			{
+				"name": "CURRENTTIMESTAMP"
+			},
+			{
+				"name": "CHANGINGUSER"
+			},
+			{
+				"name": "CONTEXT"
+			},
+			{
+				"name": "PAYLOADBEFORE"
+			},
+			{
+				"name": "PAYLOADAFTER"
+			},
+			{
+				"name": "OPERATIONTYPE"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

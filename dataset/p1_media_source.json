@@ -1,0 +1,17 @@
+{
+	"name": "p1_media_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_sftp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "SftpLocation"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

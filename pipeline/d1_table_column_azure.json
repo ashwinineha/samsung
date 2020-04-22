@@ -1,0 +1,45 @@
+{
+	"name": "d1_table_column_azure",
+	"properties": {
+		"activities": [
+			{
+				"name": "LookupTableAndColumns",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "select TABLE_NAME, COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH as CHAR_DATA_LENGTH,\nNUMERIC_PRECISION, NUMERIC_SCALE, DATETIME_PRECISION, CHARACTER_MAXIMUM_LENGTH as CLOB_DATA_LENGTH, ORDINAL_POSITION as COLUMN_POSITION, IS_NULLABLE\nfrom INFORMATION_SCHEMA.COLUMNS\nwhere TABLE_SCHEMA = '@{pipeline().parameters.schemaName}' and @{pipeline().parameters.tableNameSelector}\norder by TABLE_NAME;",
+							"type": "Expression"
+						},
+						"queryTimeout": "02:00:00"
+					},
+					"dataset": {
+						"referenceName": "d1_azure",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"parameters": {
+			"tableNameSelector": {
+				"type": "string"
+			},
+			"schemaName": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

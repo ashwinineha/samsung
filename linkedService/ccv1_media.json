@@ -1,0 +1,16 @@
+{
+	"name": "ccv1_media",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Sftp",
+		"typeProperties": {
+			"host": "100.101.1.4",
+			"port": 22,
+			"skipHostKeyValidation": true,
+			"authenticationType": "Basic",
+			"userName": "migrate",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkOTZkMGQ0Ny0xNjFiLTQ3OTItODE0MS04ZWI0OWQ1N2MzNTciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		}
+	}
+}

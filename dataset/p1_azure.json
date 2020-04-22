@@ -1,0 +1,13 @@
+{
+	"name": "p1_azure",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "p1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
