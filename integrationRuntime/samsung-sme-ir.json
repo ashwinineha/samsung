@@ -1,0 +1,7 @@
+{
+	"name": "samsung-sme-ir",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Samsung SME IR"
+	}
+}
