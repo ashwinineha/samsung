@@ -40,7 +40,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -82,7 +85,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -124,7 +130,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -166,7 +175,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -208,7 +220,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -250,7 +265,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -292,7 +310,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -334,7 +355,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			},
@@ -375,7 +399,10 @@
 				"outputs": [
 					{
 						"referenceName": "d1_media_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "ash"
+						}
 					}
 				]
 			}
