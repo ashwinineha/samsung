@@ -33,13 +33,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_image",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -75,13 +75,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_cronjob",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -117,13 +117,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_impex",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -159,13 +159,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_jasperreports",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -201,13 +201,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_backofficeconfiguration",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -243,13 +243,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_catalogsync",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -285,13 +285,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_documents",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -327,13 +327,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_email_body",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -368,13 +368,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "s1_media_source",
+						"referenceName": "d1_media_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "s1_media_sink_root",
+						"referenceName": "d1_media_sink",
 						"type": "DatasetReference"
 					}
 				]

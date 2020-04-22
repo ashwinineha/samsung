@@ -20,10 +20,11 @@
 						"query": {
 							"value": "select table_name,column_name, data_type_name as DATA_TYPE, LENGTH as CHAR_DATA_LENGTH, position as COLUMN_POSITION \nfrom table_columns where schema_name = '@{pipeline().parameters.schemaName}' and @{pipeline().parameters.tableNameSelector}\nORDER BY TABLE_NAME;",
 							"type": "Expression"
-						}
+						},
+						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "s1_hana",
+						"referenceName": "d1_hana",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
