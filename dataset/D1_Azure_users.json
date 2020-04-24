@@ -1,0 +1,242 @@
+{
+	"name": "D1_Azure_users",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "hjmpTS"
+			},
+			{
+				"name": "createdTS"
+			},
+			{
+				"name": "modifiedTS"
+			},
+			{
+				"name": "TypePkString"
+			},
+			{
+				"name": "OwnerPkString"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "sealed"
+			},
+			{
+				"name": "p_description"
+			},
+			{
+				"name": "p_name"
+			},
+			{
+				"name": "p_uid"
+			},
+			{
+				"name": "p_profilepicture"
+			},
+			{
+				"name": "p_backofficelogindisabled"
+			},
+			{
+				"name": "p_defaultpaymentaddress"
+			},
+			{
+				"name": "p_defaultshipmentaddress"
+			},
+			{
+				"name": "p_passwordencoding"
+			},
+			{
+				"name": "passwd"
+			},
+			{
+				"name": "p_passwordanswer"
+			},
+			{
+				"name": "p_passwordquestion"
+			},
+			{
+				"name": "p_sessionlanguage"
+			},
+			{
+				"name": "p_sessioncurrency"
+			},
+			{
+				"name": "p_logindisabled"
+			},
+			{
+				"name": "p_lastlogin"
+			},
+			{
+				"name": "p_hmclogindisabled"
+			},
+			{
+				"name": "p_retentionstate"
+			},
+			{
+				"name": "p_userprofile"
+			},
+			{
+				"name": "p_deactivationdate"
+			},
+			{
+				"name": "p_europe1pricefactory_udg"
+			},
+			{
+				"name": "p_europe1pricefactory_upg"
+			},
+			{
+				"name": "p_europe1pricefactory_utg"
+			},
+			{
+				"name": "p_authorizedtounlockpages"
+			},
+			{
+				"name": "p_dob"
+			},
+			{
+				"name": "p_isminor"
+			},
+			{
+				"name": "p_minortype"
+			},
+			{
+				"name": "p_citizenid"
+			},
+			{
+				"name": "aCLTS"
+			},
+			{
+				"name": "propTS"
+			},
+			{
+				"name": "p_customerid"
+			},
+			{
+				"name": "p_previewcatalogversions"
+			},
+			{
+				"name": "p_title"
+			},
+			{
+				"name": "p_defaultpaymentinfo"
+			},
+			{
+				"name": "p_token"
+			},
+			{
+				"name": "p_originaluid"
+			},
+			{
+				"name": "p_type"
+			},
+			{
+				"name": "p_profileupdatetime"
+			},
+			{
+				"name": "p_externalid"
+			},
+			{
+				"name": "p_nonenglishname"
+			},
+			{
+				"name": "p_lifecyclestatus"
+			},
+			{
+				"name": "p_lifecyclestatuscode"
+			},
+			{
+				"name": "p_gender"
+			},
+			{
+				"name": "p_martialstatus"
+			},
+			{
+				"name": "p_persontype"
+			},
+			{
+				"name": "p_countryofbirth"
+			},
+			{
+				"name": "p_countryofcitizenship"
+			},
+			{
+				"name": "p_countryofresidence"
+			},
+			{
+				"name": "p_primarylanguage"
+			},
+			{
+				"name": "p_alumni"
+			},
+			{
+				"name": "p_emailsuplementary"
+			},
+			{
+				"name": "p_marketingpermission"
+			},
+			{
+				"name": "p_englishproficiencytestresult"
+			},
+			{
+				"name": "p_updatedemail"
+			},
+			{
+				"name": "p_sendtoc4c"
+			},
+			{
+				"name": "p_enquiries"
+			},
+			{
+				"name": "p_c4cwelcomeemailsentflg"
+			},
+			{
+				"name": "p_ycomwelcomeemail"
+			},
+			{
+				"name": "p_studyplan"
+			},
+			{
+				"name": "p_site"
+			},
+			{
+				"name": "p_usercookieid"
+			},
+			{
+				"name": "p_isappcustomer"
+			},
+			{
+				"name": "p_otptoken"
+			},
+			{
+				"name": "p_termsandcondtionsacceptance"
+			},
+			{
+				"name": "p_contactmethodacceptance"
+			},
+			{
+				"name": "p_nearestidpoffice"
+			},
+			{
+				"name": "p_studydestination"
+			},
+			{
+				"name": "p_howdidyouhear"
+			},
+			{
+				"name": "p_startdate"
+			}
+		],
+		"typeProperties": {
+			"tableName": "users"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

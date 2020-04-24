@@ -1,0 +1,72 @@
+{
+	"name": "D1_Hana_Azure_ITEMSYNCTIMESTAMPS",
+	"properties": {
+		"activities": [
+			{
+				"name": "HanaToAzureCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 10,
+					"retryIntervalInSeconds": 30
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RelationalSource",
+						"query": "SELECT * FROM HYB.ITEMSYNCTIMESTAMPS"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"preCopyScript": {
+							"value": "TRUNCATE TABLE [dbo].[ITEMSYNCTIMESTAMPS]",
+							"type": "Expression"
+						}
+					},
+					"enableStaging": false,
+					"parallelCopies": 4,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"HJMPTS": "hjmpTS",
+							"CREATEDTS": "createdTS",
+							"MODIFIEDTS": "modifiedTS",
+							"TYPEPKSTRING": "TypePkString",
+							"OWNERPKSTRING": "OwnerPkString",
+							"PK": "PK",
+							"SEALED": "sealed",
+							"P_SYNCJOB": "p_syncjob",
+							"P_SOURCEITEM": "p_sourceitem",
+							"P_TARGETITEM": "p_targetitem",
+							"P_SOURCEVERSION": "p_sourceversion",
+							"P_TARGETVERSION": "p_targetversion",
+							"P_LASTSYNCSOURCEMODIFIEDTIME": "p_lastsyncsourcemodifiedtime",
+							"P_LASTSYNCTIME": "p_lastsynctime",
+							"P_PENDINGATTRIBUTESOWNERJOB": "p_pendingattributesownerjob",
+							"P_PENDINGATTRIBUTESSCHEDULEDTU": "p_pendingattributesscheduledtu",
+							"P_PENDINGATTRIBUTEQUALIFIERS": "p_pendingattributequalifiers",
+							"ACLTS": "aCLTS",
+							"PROPTS": "propTS"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "D1_Hana_ITEMSYNCTIMESTAMPS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "D1_Azure_itemsynctimestamps",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

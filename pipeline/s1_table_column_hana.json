@@ -1,0 +1,45 @@
+{
+	"name": "s1_table_column_hana",
+	"properties": {
+		"activities": [
+			{
+				"name": "LookupTableAndColumns",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SapHanaSource",
+						"query": {
+							"value": "select table_name,column_name, data_type_name as DATA_TYPE, LENGTH as CHAR_DATA_LENGTH, position as COLUMN_POSITION \nfrom table_columns where schema_name = '@{pipeline().parameters.schemaName}' and @{pipeline().parameters.tableNameSelector}\nORDER BY TABLE_NAME;",
+							"type": "Expression"
+						},
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "d1_hana",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"parameters": {
+			"tableNameSelector": {
+				"type": "string"
+			},
+			"schemaName": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

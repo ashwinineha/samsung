@@ -1,0 +1,44 @@
+{
+	"name": "D1_Azure_props",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "hjmpTS"
+			},
+			{
+				"name": "ITEMPK"
+			},
+			{
+				"name": "ITEMTYPEPK"
+			},
+			{
+				"name": "NAME"
+			},
+			{
+				"name": "LANGPK"
+			},
+			{
+				"name": "REALNAME"
+			},
+			{
+				"name": "TYPE1"
+			},
+			{
+				"name": "VALUESTRING1"
+			},
+			{
+				"name": "VALUE1"
+			}
+		],
+		"typeProperties": {
+			"tableName": "props"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

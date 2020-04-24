@@ -1,0 +1,62 @@
+{
+	"name": "D1_Hana_Azure_PROPS",
+	"properties": {
+		"activities": [
+			{
+				"name": "HanaToAzureCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 10,
+					"retryIntervalInSeconds": 30
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RelationalSource",
+						"query": "SELECT * FROM HYB.PROPS"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"preCopyScript": {
+							"value": "TRUNCATE TABLE [dbo].[PROPS]",
+							"type": "Expression"
+						}
+					},
+					"enableStaging": false,
+					"parallelCopies": 4,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"HJMPTS": "hjmpTS",
+							"ITEMPK": "ITEMPK",
+							"ITEMTYPEPK": "ITEMTYPEPK",
+							"NAME": "NAME",
+							"LANGPK": "LANGPK",
+							"REALNAME": "REALNAME",
+							"TYPE1": "TYPE1",
+							"VALUESTRING1": "VALUESTRING1",
+							"VALUE1": "VALUE1"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "D1_Hana_PROPS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "D1_Azure_props",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

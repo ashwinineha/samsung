@@ -1,0 +1,63 @@
+{
+	"name": "D1_Hana_Azure_CUSTOMERREVIEWS49SN",
+	"properties": {
+		"activities": [
+			{
+				"name": "HanaToAzureCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"retry": 10,
+					"retryIntervalInSeconds": 30
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RelationalSource",
+						"query": "SELECT * FROM HYB.CUSTOMERREVIEWS49SN"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000,
+						"preCopyScript": {
+							"value": "TRUNCATE TABLE [dbo].[CUSTOMERREVIEWS49SN]",
+							"type": "Expression"
+						}
+					},
+					"enableStaging": false,
+					"parallelCopies": 4,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"ID": "ID",
+							"ITEMPK": "ITEMPK",
+							"ITEMTYPEPK": "ITEMTYPEPK",
+							"TIMESTAMP": "timestamp",
+							"CURRENTTIMESTAMP": "currenttimestamp",
+							"CHANGINGUSER": "changinguser",
+							"CONTEXT": "context",
+							"PAYLOADBEFORE": "payloadbefore",
+							"PAYLOADAFTER": "payloadafter",
+							"OPERATIONTYPE": "operationtype"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "D1_Hana_CUSTOMERREVIEWS49SN",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "D1_Azure_customerreviews49sn",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

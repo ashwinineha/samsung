@@ -1,0 +1,71 @@
+{
+	"name": "D1_Hana_ITEMSYNCTIMESTAMPS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RelationalTable",
+		"structure": [
+			{
+				"name": "HJMPTS"
+			},
+			{
+				"name": "CREATEDTS"
+			},
+			{
+				"name": "MODIFIEDTS"
+			},
+			{
+				"name": "TYPEPKSTRING"
+			},
+			{
+				"name": "OWNERPKSTRING"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "P_SYNCJOB"
+			},
+			{
+				"name": "P_SOURCEITEM"
+			},
+			{
+				"name": "P_TARGETITEM"
+			},
+			{
+				"name": "P_SOURCEVERSION"
+			},
+			{
+				"name": "P_TARGETVERSION"
+			},
+			{
+				"name": "P_LASTSYNCSOURCEMODIFIEDTIME"
+			},
+			{
+				"name": "P_LASTSYNCTIME"
+			},
+			{
+				"name": "P_PENDINGATTRIBUTESOWNERJOB"
+			},
+			{
+				"name": "P_PENDINGATTRIBUTESSCHEDULEDTU"
+			},
+			{
+				"name": "P_PENDINGATTRIBUTEQUALIFIERS"
+			},
+			{
+				"name": "ACLTS"
+			},
+			{
+				"name": "PROPTS"
+			},
+			{
+				"name": "SEALED"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

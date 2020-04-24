@@ -1,0 +1,74 @@
+{
+	"name": "D1_Azure_itemsynctimestamps",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "hjmpTS"
+			},
+			{
+				"name": "createdTS"
+			},
+			{
+				"name": "modifiedTS"
+			},
+			{
+				"name": "TypePkString"
+			},
+			{
+				"name": "OwnerPkString"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "sealed"
+			},
+			{
+				"name": "p_syncjob"
+			},
+			{
+				"name": "p_sourceitem"
+			},
+			{
+				"name": "p_targetitem"
+			},
+			{
+				"name": "p_sourceversion"
+			},
+			{
+				"name": "p_targetversion"
+			},
+			{
+				"name": "p_lastsyncsourcemodifiedtime"
+			},
+			{
+				"name": "p_lastsynctime"
+			},
+			{
+				"name": "p_pendingattributesownerjob"
+			},
+			{
+				"name": "p_pendingattributesscheduledtu"
+			},
+			{
+				"name": "p_pendingattributequalifiers"
+			},
+			{
+				"name": "aCLTS"
+			},
+			{
+				"name": "propTS"
+			}
+		],
+		"typeProperties": {
+			"tableName": "itemsynctimestamps"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

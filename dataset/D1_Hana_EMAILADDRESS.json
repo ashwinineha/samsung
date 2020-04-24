@@ -1,0 +1,47 @@
+{
+	"name": "D1_Hana_EMAILADDRESS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_hana",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RelationalTable",
+		"structure": [
+			{
+				"name": "HJMPTS"
+			},
+			{
+				"name": "CREATEDTS"
+			},
+			{
+				"name": "MODIFIEDTS"
+			},
+			{
+				"name": "TYPEPKSTRING"
+			},
+			{
+				"name": "OWNERPKSTRING"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "P_EMAILADDRESS"
+			},
+			{
+				"name": "P_DISPLAYNAME"
+			},
+			{
+				"name": "ACLTS"
+			},
+			{
+				"name": "PROPTS"
+			},
+			{
+				"name": "SEALED"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

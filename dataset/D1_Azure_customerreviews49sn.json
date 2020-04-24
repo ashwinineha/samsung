@@ -1,0 +1,47 @@
+{
+	"name": "D1_Azure_customerreviews49sn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "ID"
+			},
+			{
+				"name": "ITEMPK"
+			},
+			{
+				"name": "ITEMTYPEPK"
+			},
+			{
+				"name": "timestamp"
+			},
+			{
+				"name": "currenttimestamp"
+			},
+			{
+				"name": "changinguser"
+			},
+			{
+				"name": "context"
+			},
+			{
+				"name": "payloadbefore"
+			},
+			{
+				"name": "payloadafter"
+			},
+			{
+				"name": "operationtype"
+			}
+		],
+		"typeProperties": {
+			"tableName": "customerreviews49sn"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

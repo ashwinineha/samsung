@@ -1,0 +1,16 @@
+{
+	"name": "p1_blob",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=p8njeunemiapycjpkof12is;",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmOWI4OWNjMy0yYmZmLTQxYWMtOTA1ZS1jYThmNjA2OGY1MjIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IXOMIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

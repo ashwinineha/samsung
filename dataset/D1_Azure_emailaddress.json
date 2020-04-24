@@ -1,0 +1,50 @@
+{
+	"name": "D1_Azure_emailaddress",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "d1_azure",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "hjmpTS"
+			},
+			{
+				"name": "createdTS"
+			},
+			{
+				"name": "modifiedTS"
+			},
+			{
+				"name": "TypePkString"
+			},
+			{
+				"name": "OwnerPkString"
+			},
+			{
+				"name": "PK"
+			},
+			{
+				"name": "sealed"
+			},
+			{
+				"name": "p_emailaddress"
+			},
+			{
+				"name": "p_displayname"
+			},
+			{
+				"name": "aCLTS"
+			},
+			{
+				"name": "propTS"
+			}
+		],
+		"typeProperties": {
+			"tableName": "emailaddress"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

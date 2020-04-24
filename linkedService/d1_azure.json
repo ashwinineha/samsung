@@ -1,0 +1,16 @@
+{
+	"name": "d1_azure",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=c4r8f-idpdev1-d1-server.database.windows.net;initial catalog=c4r8f-idpdev1-d1-db;user id=nltdnxriseky",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkODUyZTY5Yi1kNWNiLTQ4MGMtYjhlYy05ZTRkYmFkMmI4ZjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IDP-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
